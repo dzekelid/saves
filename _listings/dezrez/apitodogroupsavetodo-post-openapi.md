@@ -1,9 +1,11 @@
+---
 swagger: "2.0"
 x-collection-name: Dezrez
-x-complete: 1
+x-complete: 0
 info:
-  title: Dezrez.Rezi.Client.Api
+  title: Dezrez Saves or Updates a Group ToDo and its tasks
   version: 1.0.0
+  description: Saves or updates a group todo and its tasks.
 host: api.dezrez.com
 basePath: /
 schemes:
@@ -199,50 +201,17 @@ paths:
       - ToDo
       - Its
       - Tasks
-  /api/location/tag/match:
-    post:
-      summary: Saves a tag to location match
-      description: Saves a tag to location match.
-      operationId: Location_ProcessTagLocationMatchesBycommands
-      x-api-path-slug: apilocationtagmatch-post
-      parameters:
-      - in: body
-        name: commands
-        schema:
-          $ref: '#/definitions/holder'
-      - in: header
-        name: Rezi-Api-Version
-        description: Specifies which version of the API to call
-      responses:
-        200:
-          description: OK
-      tags:
-      - Saves
-      - Tag
-      - To
-      - Location
-      - Match
-  /api/receipt/paymentitem:
-    post:
-      summary: Saves a payment item to be processed
-      description: Saves a payment item to be processed.
-      operationId: Receipt_SavePaymentItemByrecordPaymentDataContract
-      x-api-path-slug: apireceiptpaymentitem-post
-      parameters:
-      - in: body
-        name: recordPaymentDataContract
-        schema:
-          $ref: '#/definitions/holder'
-      - in: header
-        name: Rezi-Api-Version
-        description: Specifies which version of the API to call
-      responses:
-        200:
-          description: OK
-      tags:
-      - Saves
-      - Payment
-      - Item
-      - To
-      - Be
-      - Processed
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---
